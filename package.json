@@ -1,0 +1,12 @@
+{
+  "name": "lab-bootstrap-ch15",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Taller de Bootstrap calificable · Sabores de la Plaza · Generation Colombia Cohorte 15",
+  "scripts": {
+    "test": "node scripts/calificar.js"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

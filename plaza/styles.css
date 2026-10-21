@@ -1,0 +1,19 @@
+/*
+============================================================
+Ejercicio 08 · La identidad visual de Sabores de la Plaza
+============================================================
+El cliente pidió "nuestros propios colores, no el azul de todos
+los sitios" y "una letra que se sienta cálida".
+Escribe tu CSS DEBAJO de este comentario.
+
+  - En :root, cambia --bs-primary y --bs-primary-rgb por tu color
+    principal (el mismo color: uno en hexadecimal y otro en números).
+  - En :root, cambia --bs-body-font-family por la fuente que traes
+    de Google Fonts (el mismo nombre que va en el <link>).
+  - Una regla para .btn-primary que cambie --bs-btn-bg (y si
+    quieres, --bs-btn-border-color y --bs-btn-hover-bg).
+
+Recuerda: este archivo se enlaza DESPUÉS de Bootstrap.
+La paleta es tuya: colores cálidos de plaza de mercado.
+============================================================
+*/

@@ -1,0 +1,17 @@
+{
+  "curso": "🧺 Sabores de la Plaza · Bootstrap",
+  "fechaLimite": "",
+  "patronTest": "^test\\(",
+  "entregables": ["plaza/"],
+  "protegidos": ["tests/", "scripts/", ".github/", "package.json", "package-lock.json"],
+  "ejercicios": [
+    { "id": "01", "titulo": "Bootstrap instalado", "test": "tests/01-instalacion.test.js" },
+    { "id": "02", "titulo": "Barra de navegación", "test": "tests/02-navbar.test.js" },
+    { "id": "03", "titulo": "Página de inicio", "test": "tests/03-inicio.test.js" },
+    { "id": "04", "titulo": "Puestos y tarjetas", "test": "tests/04-puestos.test.js" },
+    { "id": "05", "titulo": "Distintivos y precios", "test": "tests/05-distintivos-tabla.test.js" },
+    { "id": "06", "titulo": "Formulario de pedidos", "test": "tests/06-contacto.test.js" },
+    { "id": "07", "titulo": "Componentes de la doc", "test": "tests/07-componentes.test.js" },
+    { "id": "08", "titulo": "Identidad visual", "test": "tests/08-identidad.test.js" }
+  ]
+}
