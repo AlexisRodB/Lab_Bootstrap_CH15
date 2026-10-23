@@ -1,40 +1,109 @@
-<!--
-============================================================
-Página de INICIO · Sabores de la Plaza
-Ejercicios 01, 02, 03, 07 y 08
-============================================================
-Sabores de la Plaza es un colectivo de puestos de una plaza de
-mercado: fruteros, panadería, almuerzos, jugos naturales y café.
-Quieren un sitio de tres páginas: index.html (esta), puestos.html
-y contacto.html. Escribe tu HTML DEBAJO de este comentario.
-Todo con Bootstrap: nada de JavaScript propio.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores de la Plaza - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
 
-Ejercicio 01 · Bootstrap instalado (en las TRES páginas)
-  - El esqueleto de siempre, con el <meta name="viewport">.
-  - En el <head>: el CSS de Bootstrap 5 (cópialo de la documentación)
-    y DESPUÉS tu <link href="styles.css" rel="stylesheet">.
-  - Al final del <body>: el <script> de bootstrap.bundle.min.js.
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm py-3">
+        <div class="container-fluid px-4 px-md-5">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-white me-auto" href="index.html">
+                <svg class="me-2" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                    <line x1="6" y1="2" x2="6" y2="4"></line>
+                    <line x1="10" y1="2" x2="10" y2="4"></line>
+                    <line x1="14" y1="2" x2="14" y2="4"></line>
+                </svg>
+                <span>Sabores de la Plaza</span>
+            </a>
 
-Ejercicio 02 · Barra de navegación (idéntica en las TRES páginas)
-  - Una navbar con navbar-expand-lg, la marca "Sabores de la Plaza"
-    (clase navbar-brand) y el botón navbar-toggler para el celular.
-  - El data-bs-target del botón apunta al id del div collapse.
-  - Enlaces a index.html, puestos.html y contacto.html.
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-Ejercicio 03 · La bienvenida (solo en esta página)
-  - Un banner (hero) con el único <h1> de esta página, una frase y un
-    botón (clase btn) que lleve a puestos.html o a contacto.html.
-  - Una fila con 3 o 4 bloques de presentación (fresco, local,
-    hecho a mano…): uno debajo del otro en el celular y todos en
-    una sola fila en el computador.
-  - Un <footer> con los datos del colectivo.
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link active px-3" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="puestos.html">Nuestros Productos</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-Ejercicio 07 · El carrusel (aquí o en puestos.html)
-  - El cliente quiere "fotos que pasen solas". Búscalo en
-    Components → Carousel. Al menos 3 fotos, cada una con alt.
-  - En plaza/img/ tienes 3 imágenes listas para usar.
+    <header class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span class="text-uppercase tracking-wide text-muted fw-semibold small d-block mb-2">Sabor Tradicional & Local</span>
+                    <h1 class="display-3 fw-bold mb-3" style="color: #5c3218;">Sabores de la Plaza</h1>
+                    <p class="lead mb-4" style="color: #6c4f3d;">Un colectivo de puestos de mercado: fruteros, panadería, almuerzos, jugos naturales y el mejor café de origen.</p>
+                    <a href="puestos.html" class="btn btn-primary btn-lg shadow-sm">VER PUESTOS</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="img/cafe.svg" alt="Sabores de la plaza" class="hero-circle-frame img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
 
-Ejercicio 08 · La letra (en las TRES páginas)
-  - El <link> de Google Fonts con tu fuente, en el <head>.
-============================================================
--->
+    <section class="container my-5">
+        <div id="carruselPlaza" class="carousel slide shadow rounded-4 overflow-hidden border border-3 border-secondary border-opacity-25" data-bs-ride="carousel" data-bs-interval="2500">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2500">
+                    <img src="img/frutas.svg" class="d-block w-100" alt="Frutas frescas de la plaza" style="height: 380px; object-fit: cover;">
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                    <img src="img/pan.svg" class="d-block w-100" alt="Panadería artesanal" style="height: 380px; object-fit: cover;">
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                    <img src="img/cafe.svg" class="d-block w-100" alt="Café de la plaza" style="height: 380px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <div class="p-4 rounded-3 bg-white h-100 shadow-sm feature-card">
+                    <h3 class="h5 fw-bold" style="color: #5c3218;">Fresco</h3>
+                    <p class="small text-muted mb-0">Productos traídos directamente del campo cada mañana.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 rounded-3 bg-white h-100 shadow-sm feature-card">
+                    <h3 class="h5 fw-bold" style="color: #5c3218;">Local</h3>
+                    <p class="small text-muted mb-0">Apoyamos a nuestros comerciantes y agricultores de la región.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 rounded-3 bg-white h-100 shadow-sm feature-card">
+                    <h3 class="h5 fw-bold" style="color: #5c3218;">Hecho a mano</h3>
+                    <p class="small text-muted mb-0">Preparaciones tradicionales con amor y sazón casera.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 rounded-3 bg-white h-100 shadow-sm feature-card">
+                    <h3 class="h5 fw-bold" style="color: #5c3218;">Variedad</h3>
+                    <p class="small text-muted mb-0">Encuentra todo lo que necesitas en un solo lugar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 mt-5 text-center text-white" style="background-color: #3f2210;">
+        <div class="container">
+            <p class="small text-white-50 mb-0">Colectivo de puesteros: Frutería, Panadería, Almuerzos, Jugos y Café.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

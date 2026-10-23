@@ -17,3 +17,105 @@ Recuerda: este archivo se enlaza DESPUÉS de Bootstrap.
 La paleta es tuya: colores cálidos de plaza de mercado.
 ============================================================
 */
+
+
+/* ============================================================
+Ejercicio 08 · La identidad visual de Sabores de la Plaza
+Adaptado a la plantilla de tonos cálidos / plaza de mercado
+============================================================ */
+
+/* ============================================================
+Ejercicio 08 · La identidad visual de Sabores de la Plaza
+============================================================ */
+
+:root {
+    --bs-primary: #5c3218;
+    --bs-primary-rgb: 92, 50, 24;
+    --bs-body-bg: #f9f5ed;
+    --bs-body-color: #3f2210;
+
+    --bs-body-font-family: 'Playfair Display', Georgia, serif;
+    
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.navbar-custom {
+    background-color: #5c3218 !important;
+}
+
+.navbar-custom .nav-link {
+    color: #f9f5ed !important;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link.active {
+    background-color: #f9f5ed;
+    color: #5c3218 !important;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    --bs-btn-bg: #5c3218;
+    --bs-btn-border-color: #5c3218;
+    --bs-btn-hover-bg: #3f2210;
+    --bs-btn-hover-border-color: #3f2210;
+    border-radius: 20px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.hero-circle-frame {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 8px solid #5c3218;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@media (min-width: 992px) {
+    .hero-circle-frame {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+.feature-card {
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.35s ease, 
+                border-color 0.35s ease;
+    border: 1px solid rgba(92, 50, 24, 0.12) !important;
+    cursor: default;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(92, 50, 24, 0.18) !important;
+    border-color: #5c3218 !important;
+}
+
+.feature-card:hover h3 {
+    color: #3f2210 !important;
+}

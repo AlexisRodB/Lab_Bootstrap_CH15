@@ -1,29 +1,161 @@
-<!--
-============================================================
-Página CONTACTO Y PEDIDOS · Sabores de la Plaza
-Ejercicios 01, 02, 06, 07 y 08
-============================================================
-Escribe tu HTML DEBAJO de este comentario.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores de la Plaza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
 
-Ejercicios 01 y 02 · Igual que en index.html
-  - Bootstrap instalado y la MISMA barra de navegación.
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm py-3">
+        <div class="container-fluid px-4 px-md-5">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-white me-auto" href="index.html">
+                <svg class="me-2" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                    <line x1="6" y1="2" x2="6" y2="4"></line>
+                    <line x1="10" y1="2" x2="10" y2="4"></line>
+                    <line x1="14" y1="2" x2="14" y2="4"></line>
+                </svg>
+                <span>Sabores de la Plaza</span>
+            </a>
 
-Ejercicio 06 · El formulario
-  - Campos: nombre (type="text"), teléfono o correo (type="tel" o
-    type="email"), un <select> con al menos 3 puestos y un
-    <textarea> para el mensaje.
-  - Cada campo con su <label for="..."> igual a su id.
-  - Clases de Bootstrap: form-control (form-select en el select).
-  - Un <button type="submit"> con btn y un color (btn-primary…).
-  - Centrado y sin ocupar todo el ancho en pantalla grande:
-    la fila con justify-content-center y la columna menor a 12.
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-Ejercicio 07 · Más componentes de la documentación
-  - Preguntas frecuentes (Components → Accordion), al menos 3.
-  - Y uno de estos dos: un modal (Components → Modal) o unas
-    pestañas (Components → Navs and tabs). Aquí o en otra página.
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="puestos.html">Nuestros Puestos</a></li>
+                    <li class="nav-item"><a class="nav-link active px-3" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-Ejercicio 08 · La letra
-  - El mismo <link> de Google Fonts que en index.html.
-============================================================
--->
+    <main class="container my-5">
+        <h1 class="display-5 fw-bold text-center mb-4" style="color: #5c3218;">Haz tu Pedido sin Llamar</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <form class="p-4 p-md-5 border-0 rounded-4 shadow-sm bg-white">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="papitas" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="contacto" class="form-label fw-semibold">Teléfono o Correo electrónico</label>
+                        <input type="email" class="form-control" id="contacto" placeholder="papitas@correo.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="puesto" class="form-label fw-semibold">Selecciona el Puesto</label>
+                        <select class="form-select" id="puesto" required>
+                            <option value="" selected disabled>Elige una opción...</option>
+                            <option value="frutas">Frutería Doña Rosa</option>
+                            <option value="panaderia">Panadería Artesanal</option>
+                            <option value="almuerzos">Almuerzos Caseros</option>
+                            <option value="jugos">Jugos Naturales</option>
+                            <option value="cafe">Café de la Plaza</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="mensaje" class="form-label fw-semibold">Detalles de tu pedido</label>
+                        <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe aquí los productos que necesitas..." required></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">ENVIAR PEDIDO</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <section class="mt-5 pt-5 border-top">
+            <h2 class="h3 fw-bold text-center mb-4" style="color: #5c3218;">Preguntas Frecuentes</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion shadow-sm" id="accordionContacto">
+                        <div class="accordion-item border-0 mb-2 rounded overflow-hidden">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ¿A qué hora abren los puestos?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionContacto">
+                                <div class="accordion-body">
+                                    Todos los puestos abren sus puertas desde las 6:00 a.m. hasta las 4:00 p.m.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-2 rounded overflow-hidden">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Tienen servicio a domicilio?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionContacto">
+                                <div class="accordion-body">
+                                    ¡Sí! Recibimos tu pedido desde este sitio web y te lo llevamos directamente a la puerta de tu casa.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 rounded overflow-hidden">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Cuáles son los medios de pago?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionContacto">
+                                <div class="accordion-body">
+                                    Aceptamos efectivo, transferencias bancarias y pagos por código QR.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalHorarios">
+                            Ver información de la Plaza
+                        </button>
+                    </div>
+
+                    <div class="modal fade" id="modalHorarios" tabindex="-1" aria-labelledby="modalHorariosLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color: #5c3218; color: white;">
+                                    <h5 class="modal-title" id="modalHorariosLabel">Visítanos en la Plaza</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-toggle="modal" data-bs-target="#modalHorarios" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Estamos ubicados en el Pabellón Central de la Plaza de Mercado.</p>
+                                    <p class="mb-0"><strong>¡Te esperamos para brindarte la mejor atención y productos 100% frescos!</strong></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalHorarios">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 mt-auto text-center text-white" style="background-color: #3f2210;">
+        <div class="container">
+            <p class="small text-white-50 mb-0">Colectivo de puesteros: Frutería, Panadería, Almuerzos, Jugos y Café.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
